@@ -1,7 +1,9 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 function Footer() {
+  const t = useTranslations("Footer");
   return (
-    <div className="p-8">
+    <section className="p-8" id="footer">
       <div className="flex justify-between p-6 font-sans">
         <div>
           <p className="text-xl font-bold mb-4 text-green-400">IfraneSmartX</p>
@@ -34,59 +36,56 @@ function Footer() {
                   strokeWidth="1.5"
                 />
               </svg>
-              <p className="ml-2">Do you want to get a job?</p>
+              <p className="ml-2">{t("job")}</p>
             </div>
-            <p>
-              Join our team to grow your skills! We offer great opportunities
-              for career growth.
-            </p>
+            <p>{t("join_team")}</p>
             <button className="p-2 border rounded-full bg-green-400 hover:bg-green-500 mt-4 text-white transition">
-              Apply to join us
+              {t("apply_to_join")}
             </button>
           </div>
         </div>
         <div className="">
-          <p className="text-lg font-semibold mb-4">Company</p>
+          <p className="text-lg font-semibold mb-4">{t("company")}</p>
           <ul className="text-gray-500">
             <li className="hover:text-green-400 transition cursor-pointer">
-              About us
+            {t("about_us")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-              Customer reviews
+            {t("customer_reviews")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-              Pricing
+              {t("pricing")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-              Company policies
+            {t("company_policies")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-              Terms and services
+            {t("terms_and_services")}
             </li>
           </ul>
         </div>
         <div className="">
-          <p className="text-lg font-semibold mb-4">Services</p>
+          <p className="text-lg font-semibold mb-4">{t("services")}</p>
           <ul className="text-gray-500">
             <li className="hover:text-green-400 transition cursor-pointer">
-              Tap repair and replacement
+            {t("tap_repair_and_replacement")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-              Toilet and shower leaks
+            {t("toilet_and_shower_leaks")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-              Kitchen instalations
+            {t("kitchen_installations")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-              Bathroom instalations
+            {t("bathroom_installations")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-              Emergency plumber
+            {t("emergency_plumber")}
             </li>
           </ul>
         </div>
         <div className="">
-          <p className="text-lg font-semibold mb-4">Get in Touch</p>
+          <p className="text-lg font-semibold mb-4"> {t("get_in_touch")}</p>
           <ul className="text-gray-500">
             <li className="flex">
               <svg
@@ -94,7 +93,7 @@ function Footer() {
                 viewBox="0 0 24 24"
                 width={20}
                 height={20}
-                color={"#a3e635"}
+                color={"#22c55e"}
                 fill={"none"}
               >
                 <path
@@ -112,7 +111,7 @@ function Footer() {
                 viewBox="0 0 24 24"
                 width={20}
                 height={20}
-                color={"#a3e635"}
+                color={"#22c55e"}
                 fill={"none"}
               >
                 <path
@@ -136,7 +135,7 @@ function Footer() {
                 viewBox="0 0 24 24"
                 width={20}
                 height={20}
-                color={"#a3e635"}
+                color={"#22c55e"}
                 fill={"none"}
               >
                 <path
@@ -160,7 +159,7 @@ function Footer() {
         <div className="flex justify-between">
           <p className="text-gray-500 text-sm">
             &copy; 2024 <span className="text-green-400">IfraneSmartX</span>.
-            All rights reserved.
+            {t("rights_reserved")}
           </p>
           <div className="flex gap-4">
             <Link href="">
@@ -219,7 +218,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

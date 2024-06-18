@@ -1,0 +1,43 @@
+{
+    "Header": {
+        "nav_about": "About us",
+        "nav_services": "Services",
+        "nav_pricing": "Pricing",
+        "nav_reviews": "Reviews",
+        "get_started_button": "Get started"
+    },
+    "Hero": {
+        "title": "Check our professional services!",
+        "title1": "Trusted and Reliable Services",
+        "title1_desc": "Trusted and Reliable Services Trusted and Reliable Services Trusted and Reliable Services"
+    },
+    "Us": {
+        "title": "What Makes Us Different?",
+        "description": "We believe in building long-lasting relationships with our customers and always treat them with respect and professionalism.",
+        "qualified_people": "Qualified Engineers",
+        "qualified_people_desc": "Our plumbers are fully qualified, highly experienced, and insured, providing you with complete peace of mind.",
+        "services_24_7": "24/7 Services",
+        "services_24_7_desc": "Reach out to us at any time, our skilled plumbing engineers will respond quickly to provide the help you need.",
+        "competitive_pricing": "Competitive Pricing",
+        "competitive_pricing_desc": "We are committed to matching the prices set by our competitors for any plumbing services and installations."
+    },
+    "Footer": {
+        "job": "Do you want to get a job?",
+        "join_team": "Join our team to grow your skills! We offer great opportunities for career growth.",
+        "apply_to_join": "Apply to join us",
+        "rights_reserved": "All rights reserved.",
+        "company": "Company",
+        "about_us": "About us",
+        "customer_reviews": "Customer reviews",
+        "pricing": "Pricing",
+        "company_policies": "Company policies",
+        "terms_and_services": "Terms and services",
+        "services": "Services",
+        "tap_repair_and_replacement": "Tap Repair and Replacement",
+        "toilet_and_shower_leaks": "Toilet and Shower Leaks",
+        "kitchen_installations": "Kitchen Installations",
+        "bathroom_installations": "Bathroom Installations",
+        "emergency_plumber": "Emergency Plumber",
+        "get_in_touch": "Get in Touch"
+    }
+}
