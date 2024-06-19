@@ -1,12 +1,12 @@
 "use client";
-import SignInForm from "@/app/components/forms/SignInForm";
+import SignUpForm from "@/app/components/forms/SignUpForm";
 
-const SignInPage = () => {
+const SignUpPage = () => {
   return (
-    <div>
-      <SignInForm />
+    <div className="flex items-center justify-center min-h-screen">
+      <SignUpForm />
     </div>
   );
 };
 
-export default SignInPage;
+export default SignUpPage;

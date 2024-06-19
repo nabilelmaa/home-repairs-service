@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useRouter } from "next/navigation";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 // import { useUser } from "@/contexts/UserContext";
 
 const SignInForm: React.FC = () => {
@@ -14,6 +14,7 @@ const SignInForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const t = useTranslations("LoginForm");
+  const locale = useLocale();
   //   const { setUser } = useUser();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -144,7 +145,7 @@ const SignInForm: React.FC = () => {
             </svg>
             <label
               className="block text-gray-700 text-sm ml-1"
-              htmlFor="password"
+              htmlFor="passwhref={`/${locale}/sign-in`}ord"
             >
               {t("password")}
             </label>
@@ -194,7 +195,10 @@ const SignInForm: React.FC = () => {
       <div className="flex items-center justify-between">
         <span className="inline-block align-baseline text-sm">
           {t("dont_have")}{" "}
-          <a className="text-blue-500 hover:text-blue-600" href="/sign-up">
+          <a
+            className="text-blue-500 hover:text-blue-600"
+            href={`/${locale}/sign-up`}
+          >
             {t("sign_up")}
           </a>
         </span>

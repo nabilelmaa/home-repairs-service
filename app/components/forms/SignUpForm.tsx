@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
 import { useRouter } from "next/navigation";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
+import { useTranslations, useLocale } from "next-intl";
 
 const SignUpForm: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -12,6 +12,8 @@ const SignUpForm: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState(false);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const t = useTranslations("RegisterForm");
+  const locale = useLocale();
 
   const handleSubmit = async (e: React.FormEvent) => {
     setLoading(true);
@@ -32,7 +34,7 @@ const SignUpForm: React.FC = () => {
         console.log("Created successfully!");
         console.log(`${data.token}`);
         setLoading(false);
-        router.push("/sign-in");
+        router.push(`/${locale}/sign-in`);
       } else {
         setLoading(false);
         setErrorMessage(true);
@@ -49,12 +51,12 @@ const SignUpForm: React.FC = () => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm mt-12">
       <h2 className="text-2xl font-bold mb-6 text-center">
-        Create a new account 🥳
+        {t("create_account")} 🥳
       </h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm mb-2" htmlFor="text">
-            Username
+            {t("username")}
           </label>
           <input
             type="text"
@@ -67,7 +69,7 @@ const SignUpForm: React.FC = () => {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm mb-2" htmlFor="email">
-            Email
+            {t("email")}
           </label>
           <input
             type="email"
@@ -83,7 +85,7 @@ const SignUpForm: React.FC = () => {
             className="block text-gray-700 text-sm mb-2"
             htmlFor="password"
           >
-            Password
+            {t("password")}
           </label>
           <div className="relative">
             <input
@@ -108,38 +110,27 @@ const SignUpForm: React.FC = () => {
             type="submit"
             className="bg-blue-500 text-white w-full px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
           >
-           {loading ? (
+            {loading ? (
               <div className="flex items-center justify-center">
                 <span className="loading loading-spinner loading-sm mr-2"></span>
-                Submitting..
+                {t("submitting")}..
               </div>
             ) : (
-              "Submit"
+              t("submit_button")
             )}
           </button>
         </div>
       </form>
       <div className="flex items-center justify-between">
         <span className="inline-block align-baseline text-sm">
-          Already have an accout?{" "}
-          <a className="text-blue-500 hover:text-blue-800" href="/sign-in">
-            Signup
+          {t("have_account")}{" "}
+          <a
+            className="text-blue-500 hover:text-blue-800"
+            href={`/${locale}/sign-in`}
+          >
+            {t("sign_in")}
           </a>
         </span>
-      </div>
-      <div className="flex items-center my-4">
-        <hr className="flex-grow border-gray-300" />
-        <span className="mx-4 text-gray-400">Or</span>
-        <hr className="flex-grow border-gray-300" />
-      </div>
-      <div className="flex justify-center">
-        <button
-          className="flex items-center justify-center hover:bg-red-600 hover:text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full border border-black"
-          type="button"
-        >
-          <FcGoogle className="mr-2 text-xl" />
-          Signup with Google
-        </button>
       </div>
     </div>
   );

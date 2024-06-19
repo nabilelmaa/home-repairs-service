@@ -59,8 +59,9 @@
         "username": "Username",
         "email": "Email",
         "password": "Password",
-        "signup_button": "Sign Up",
-        "dont_have": "Already have an account?",
+        "submit_button": "Submit",
+        "submitting": "Submitting",
+        "have_account": "Already have an account?",
         "sign_in": "Signin",
         "error_message_register": "User with that email already exist!"
     }
