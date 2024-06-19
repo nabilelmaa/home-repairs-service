@@ -1,11 +1,12 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { useState, useEffect } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import LocalSwitcher from "./local-switcher";
+import Link from "next/link";
 
 function Header() {
   const t = useTranslations("Header");
+  const locale = useLocale();
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -27,6 +28,7 @@ function Header() {
           >
             {t("nav_about")}
           </li>
+
           <li
             className="hover:text-green-400 transition cursor-pointer"
             onClick={() => scrollToSection("footer")}
@@ -48,9 +50,11 @@ function Header() {
         <div className="">
           <LocalSwitcher />
         </div>
-        <button className="ml-4 p-2 border rounded-full bg-green-400 hover:bg-green-500 transition">
-          {t("get_started_button")}
-        </button>
+        <Link href={`/${locale}/sign-in`}>
+          <button className="ml-4 p-2 border rounded-full font-semibold bg-green-400 hover:bg-green-500 transition">
+            {t("get_started_button")}
+          </button>
+        </Link>
       </div>
     </div>
   );

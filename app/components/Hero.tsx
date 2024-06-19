@@ -8,7 +8,6 @@ function Hero() {
   const t = useTranslations("Hero");
   return (
     <section>
-      {/* <motion.div initial="hidden" animate="visible" className="flex gap-32"> */}
       <div className="flex justify-between gap-32 mb-12">
         <div>
           <p className="text-4xl font-semibold tracking-[0em] text-black darkk:text-white md:text-2xl md:leading-[5rem]">
@@ -18,15 +17,6 @@ function Hero() {
             {t("title1_desc")}
           </p>
         </div>
-
-        {/* <FlipText
-          className="text-4xl font-semibold tracking-[-0.1em] text-black darkk:text-white md:text-2xl md:leading-[5rem]"
-          word="Trusted and reliable services"
-        /> */}
-        {/* <motion.div
-          variants={slideInFromRight(0.8)}
-          className="text-4xl sm:text-5xl lg:text-6xl font-semibold"
-        > */}
         <div>
           <Image
             src="/image03.png"
@@ -47,10 +37,6 @@ function Hero() {
             className="rounded-md"
           />
         </div>
-        <FlipText
-          className="text-4xl font-semibold tracking-[0em] text-black darkk:text-white md:text-2xl md:leading-[5rem]"
-          word="Hero section ☕"
-        />
       </div>
     </section>
   );

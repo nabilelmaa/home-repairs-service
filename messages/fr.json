@@ -21,6 +21,10 @@
         "competitive_pricing": "Tarification compétitive",
         "competitive_pricing_desc": "Nous nous engageons à égaler les prix fixés par nos concurrents pour tous les services et installations de plomberie."
     },
+    "Reviews": {
+        "title": "Ce Que Disent Nos Clients",
+        "description": "Jetez un œil aux commentaires de nos clients satisfaits pour avoir une idée de la qualité de nos services."
+    },
     "Footer": {
         "job": "Voulez-vous trouver un emploi?",
         "join_team": "Rejoignez notre équipe pour développer vos compétences! Nous offrons de grandes opportunités de croissance professionnelle.",
@@ -39,5 +43,25 @@
         "bathroom_installations": "Installations de salle de bain",
         "emergency_plumber": "Plombier d'urgence",
         "get_in_touch": "Contactez-nous"
+    },
+    "LoginForm": {
+        "welcome_message": "Bienvenue à nouveau",
+        "email": "Email",
+        "password": "Mot de passe",
+        "forgot_password": "Mot de passe oublié?",
+        "signin_button": "Se connecter",
+        "dont_have": "Vous n'avez pas de compte?",
+        "sign_up": "S'inscrire",
+        "error_message_login": "Votre email ou mot de passe est incorrect!"
+    },
+    "RegisterForm": {
+        "create_account": "Créer un compte",
+        "username": "Nom d'utilisateur",
+        "email": "Email",
+        "password": "Mot de passe",
+        "signup_button": "S'inscrire",
+        "dont_have": "Vous avez déjà un compte?",
+        "sign_in": "Se connecter",
+        "error_message_register": "Un utilisateur avec cet email existe déjà !"
     }
 }

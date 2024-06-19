@@ -1,6 +1,6 @@
 {
     "Header": {
-        "nav_about": "About us",
+        "nav_about": "About",
         "nav_services": "Services",
         "nav_pricing": "Pricing",
         "nav_reviews": "Reviews",
@@ -21,6 +21,10 @@
         "competitive_pricing": "Competitive Pricing",
         "competitive_pricing_desc": "We are committed to matching the prices set by our competitors for any plumbing services and installations."
     },
+    "Reviews": {
+        "title": "What Our Customers Say About Us",
+        "description": "Take a look at the feedback from satisfied customers to get an idea of the quality of our services."
+    },
     "Footer": {
         "job": "Do you want to get a job?",
         "join_team": "Join our team to grow your skills! We offer great opportunities for career growth.",
@@ -39,5 +43,25 @@
         "bathroom_installations": "Bathroom Installations",
         "emergency_plumber": "Emergency Plumber",
         "get_in_touch": "Get in Touch"
+    },
+    "LoginForm": {
+        "welcome_message": "Welcome back",
+        "email": "Email",
+        "password": "Password",
+        "forgot_password": "Forgot password?",
+        "signin_button": "Sign In",
+        "dont_have": "Don't have an account?",
+        "sign_up": "Signup",
+        "error_message_login": "Either your email or password is incorrect!"
+    },
+    "RegisterForm": {
+        "create_account": "Create account",
+        "username": "Username",
+        "email": "Email",
+        "password": "Password",
+        "signup_button": "Sign Up",
+        "dont_have": "Already have an account?",
+        "sign_in": "Signin",
+        "error_message_register": "User with that email already exist!"
     }
 }

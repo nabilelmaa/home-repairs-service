@@ -14,7 +14,7 @@ function Footer() {
                 viewBox="0 0 24 24"
                 width={24}
                 height={24}
-                color={"#a3e635"}
+                color={"#22c55e"}
                 fill={"none"}
               >
                 <path
@@ -39,28 +39,30 @@ function Footer() {
               <p className="ml-2">{t("job")}</p>
             </div>
             <p>{t("join_team")}</p>
-            <button className="p-2 border rounded-full bg-green-400 hover:bg-green-500 mt-4 text-white transition">
-              {t("apply_to_join")}
-            </button>
+            <Link href="/apply">
+              <button className="p-2 border rounded-full bg-green-400 hover:bg-green-500 mt-4 text-white transition">
+                {t("apply_to_join")}
+              </button>
+            </Link>
           </div>
         </div>
         <div className="">
           <p className="text-lg font-semibold mb-4">{t("company")}</p>
           <ul className="text-gray-500">
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("about_us")}
+              {t("about_us")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("customer_reviews")}
+              {t("customer_reviews")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
               {t("pricing")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("company_policies")}
+              {t("company_policies")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("terms_and_services")}
+              {t("terms_and_services")}
             </li>
           </ul>
         </div>
@@ -68,19 +70,19 @@ function Footer() {
           <p className="text-lg font-semibold mb-4">{t("services")}</p>
           <ul className="text-gray-500">
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("tap_repair_and_replacement")}
+              {t("tap_repair_and_replacement")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("toilet_and_shower_leaks")}
+              {t("toilet_and_shower_leaks")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("kitchen_installations")}
+              {t("kitchen_installations")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("bathroom_installations")}
+              {t("bathroom_installations")}
             </li>
             <li className="hover:text-green-400 transition cursor-pointer">
-            {t("emergency_plumber")}
+              {t("emergency_plumber")}
             </li>
           </ul>
         </div>
@@ -174,20 +176,20 @@ function Footer() {
                 <path
                   d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
                   stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
                   stroke="currentColor"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                 />
                 <path
                   d="M17.5078 6.5L17.4988 6.5"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </Link>

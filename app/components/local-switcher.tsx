@@ -1,24 +1,29 @@
 "use client";
 import { useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
 
 function LocalSwitcher() {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const localeActive = useLocale();
-  const onSelectChnage = (e: ChangeEvent<HTMLSelectElement>) => {
+  const pathname = usePathname();
+
+  const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const nextLocale = e.target.value;
+    const newPathname = pathname.replace(`/${localeActive}`, `/${nextLocale}`);
+
     startTransition(() => {
-      router.replace(`/${nextLocale}`);
+      router.replace(newPathname);
     });
   };
+
   return (
-    <label className="border rounded p-2">
+    <label className="border rounded border-green-300 p-2">
       <select
         defaultValue={localeActive}
         className="bg-transparent py-2"
-        onChange={onSelectChnage}
+        onChange={onSelectChange}
         disabled={isPending}
       >
         <option value="en">English</option>
