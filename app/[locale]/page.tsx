@@ -11,7 +11,6 @@ export default function Home() {
       <Hero />
       <WhyUs />
       <Reviews />
-      <SignInForm />
     </main>
   );
 }
