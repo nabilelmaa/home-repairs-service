@@ -1,25 +1,25 @@
 "use client";
-
+import React from "react";
 import { useTranslations, useLocale } from "next-intl";
 import LocalSwitcher from "./local-switcher";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import { FaUserCircle } from "react-icons/fa";
-import { useEffect } from "react";
 
-const Header = () => {
-  const { isAuthenticated, logout, checkAuthState } = useAuth();
+const Header: React.FC = () => {
+  const { isAuthenticated, logout } = useAuth();
   const t = useTranslations("Header");
   const locale = useLocale();
-  useEffect(() => {
-    checkAuthState();
-  }, [checkAuthState]);
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const handleLogout = () => {
+    logout();
   };
 
   return (
@@ -36,9 +36,9 @@ const Header = () => {
               <FaUserCircle className="text-2xl ml-4" />
               {/* <button
                 className="ml-4 p-2 border rounded-full font-semibold bg-green-400 hover:bg-green-500 transition"
-                onClick={logout}
+                onClick={handleLogout}
               >
-              {t("signout_button")}
+                {t("signout_button")}
               </button> */}
             </div>
           </>

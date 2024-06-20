@@ -64,6 +64,6 @@
         "submitting": "Soumission en cours",
         "have_account": "Vous avez déjà un compte ?",
         "sign_in": "Se connecter",
-        "error_message_register": "Un utilisateur avec cet email existe déjà !"
+        "error_message_register": "Un utilisateur avec cet email existe déjà!"
     }
 }
