@@ -19,8 +19,8 @@ function Hero() {
         </div>
         <div>
           <Image
-            src="/image03.png"
-            alt="image03"
+            src="/image01.png"
+            alt="image01"
             width={350}
             height={45}
             className="rounded-md"
@@ -31,7 +31,7 @@ function Hero() {
         <div>
           <Image
             src="/image02.png"
-            alt="image03"
+            alt="image02"
             width={350}
             height={45}
             className="rounded-md"

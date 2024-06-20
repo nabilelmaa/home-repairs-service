@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import MarqueeReviews from "./MarqueeReviews";
 
 function Reviews() {
   const t = useTranslations("Reviews");
@@ -7,11 +8,11 @@ function Reviews() {
       <p className="font-semibold text-sm md:text-xl lg:text-2xl">
         {t("title")}
       </p>
-      <p className="text-gray-500 mt-4 text-xs md:text-sm lg:text-sm">
+      <p className="text-gray-500 mt-4 text-xs md:text-sm lg:text-sm mb-6">
         {t("description")}
       </p>
       <div className="flex gap-8">
-        <div className="p-4 mt-4 bg-white rounded-xl shadow-md">
+        {/* <div className="p-4 mt-4 bg-white rounded-xl shadow-md">
           <p className="font-semibold text-lg">Nabil El Maaroufi</p>
           <p className="text-gray-500">
             IfraneSmartX has consistently delivered exceptional service with a
@@ -32,7 +33,8 @@ function Reviews() {
             matters. I highly recommend them to anyone looking for reliable and
             professional services.
           </p>
-        </div>
+        </div> */}
+        <MarqueeReviews />
       </div>
     </section>
   );
