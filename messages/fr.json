@@ -4,7 +4,8 @@
         "nav_services": "Services",
         "nav_pricing": "Tarification",
         "nav_reviews": "Avis",
-        "get_started_button": "Commencer"
+        "signin_button": "Se connecter",
+        "signout_button": "Se déconnecter"
     },
     "Hero": {
         "title": "Découvrez nos services professionnels!",

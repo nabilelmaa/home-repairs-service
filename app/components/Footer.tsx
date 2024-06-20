@@ -1,7 +1,8 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 function Footer() {
   const t = useTranslations("Footer");
+  const locale = useLocale();
   return (
     <section className="p-8" id="footer">
       <div className="flex justify-between p-6 font-sans">
@@ -39,7 +40,7 @@ function Footer() {
               <p className="ml-2">{t("job")}</p>
             </div>
             <p>{t("join_team")}</p>
-            <Link href="/apply">
+            <Link href={`${locale}/apply`}>
               <button className="p-2 border rounded-full bg-green-400 hover:bg-green-500 mt-4 text-white transition">
                 {t("apply_to_join")}
               </button>

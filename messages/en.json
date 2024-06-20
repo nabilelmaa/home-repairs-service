@@ -4,7 +4,9 @@
         "nav_services": "Services",
         "nav_pricing": "Pricing",
         "nav_reviews": "Reviews",
-        "get_started_button": "Get started"
+        "signin_button": "Sign in",
+        "signout_button": "Log out"
+
     },
     "Hero": {
         "title": "Check our professional services!",

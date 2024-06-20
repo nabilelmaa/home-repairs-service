@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useRouter } from "next/navigation";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { useTranslations, useLocale } from "next-intl";
+import { useAuth } from "@/contexts/AuthContext";
 // import { useUser } from "@/contexts/UserContext";
 
 const SignInForm: React.FC = () => {
@@ -15,6 +16,7 @@ const SignInForm: React.FC = () => {
   const router = useRouter();
   const t = useTranslations("LoginForm");
   const locale = useLocale();
+  const { login } = useAuth();
   //   const { setUser } = useUser();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,30 +35,9 @@ const SignInForm: React.FC = () => {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("token", data.token);
-        const userDetailsResponse = await fetch("/api/auth/user-details", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
-        });
-
-        const userDetailsData = await userDetailsResponse.json();
-
-        if (userDetailsResponse.ok) {
-          const { username } = userDetailsData.user;
-
-          //   setUser({ username, email });
-
-          console.log(`${data.token}`);
-          setLoading(false);
-          router.push("/dashboard/my-todos");
-        } else {
-          setLoading(false);
-          setErrorMessage(true);
-          console.error(userDetailsData.message);
-        }
+        login();
+        setLoading(false);
+        router.push(`/${locale}/services`);
       } else {
         setLoading(false);
         setErrorMessage(true);

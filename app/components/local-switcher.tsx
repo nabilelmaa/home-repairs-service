@@ -19,7 +19,7 @@ function LocalSwitcher() {
   };
 
   return (
-    <label className="border rounded border-green-300 p-2">
+    <label className="border rounded border-green-300 ">
       <select
         defaultValue={localeActive}
         className="bg-transparent py-2"

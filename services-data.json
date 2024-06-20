@@ -1,0 +1,15 @@
+[
+    {
+        "id": "60b6b3b59f9f9f9f9f9f9f9f",
+        "providerId": "60b6b3b59f9f9f9f9f9f9f9f",
+        "title": "Web Development",
+        "description": "Full-stack web development services.",
+        "photos": [
+            "https://randomuser.me/api/portraits/men/1.jpg"
+        ],
+        "pricePerHour": 50,
+        "category": "IT Services",
+        "createdAt": "2021-06-01T00:00:00.000Z",
+        "updatedAt": "2021-06-01T00:00:00.000Z"
+    }
+]

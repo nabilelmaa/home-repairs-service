@@ -1,43 +1,52 @@
-"use client";
+// components/AnimatedBackground.tsx
 
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
 
-interface MeteorsProps {
-  number?: number;
-}
-export const Meteors = ({ number = 20 }: MeteorsProps) => {
-  const [meteorStyles, setMeteorStyles] = useState<Array<React.CSSProperties>>(
-    []
-  );
+const AnimatedBackground = () => {
+  const [lines, setLines] = useState<Array<{ top: number; delay: number }>>([]);
 
   useEffect(() => {
-    const styles = [...new Array(number)].map(() => ({
-      top: -5,
-      left: Math.floor(Math.random() * window.innerWidth) + "px",
-      animationDelay: Math.random() * 1 + 0.2 + "s",
-      animationDuration: Math.floor(Math.random() * 8 + 2) + "s",
+    // Generate random lines with animation delays
+    const linesCount = 20;
+    const newLines = Array.from({ length: linesCount }, () => ({
+      top: Math.random() * 100,
+      delay: Math.random() * 2, // Adjust delay as needed
     }));
-    setMeteorStyles(styles);
-  }, [number]);
+    setLines(newLines);
+  }, []);
 
   return (
-    <>
-      {[...meteorStyles].map((style, idx) => (
-        // Meteor Head
-        <span
-          key={idx}
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {lines.map((line, index) => (
+        <div
+          key={index}
           className={clsx(
-            "pointer-events-none absolute left-1/2 top-1/2 h-0.5 w-0.5 rotate-[215deg] animate-meteor rounded-[9999px] bg-slate-500 shadow-[0_0_0_1px_#ffffff10]"
+            "absolute bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300",
+            "opacity-50",
+            "transform rotate-45",
+            "rounded-full",
+            "pointer-events-none",
+            "animate-floating",
+            "w-96",
+            "h-1",
+            "left-1/2",
+            "top-1/2",
+            "-translate-x-1/2",
+            `-translate-y-1/2`,
+            "z-0",
+            "before:content-['']",
+            "before:absolute",
+            "before:inset-0"
           )}
-          style={style}
-        >
-          {/* Meteor Tail */}
-          <div className="pointer-events-none absolute top-1/2 -z-10 h-[1px] w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 to-transparent" />
-        </span>
+          style={{
+            top: `${line.top}%`,
+            animationDelay: `${line.delay}s`,
+          }}
+        />
       ))}
-    </>
+    </div>
   );
 };
 
-export default Meteors;
+export default AnimatedBackground;
